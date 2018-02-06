@@ -1,0 +1,1 @@
+My first react native project as a part of Learn react native task I have set for myself. This is done based on tutorial https://www.raywenderlich.com/178012/react-native-tutorial-building-android-apps-javascript.
