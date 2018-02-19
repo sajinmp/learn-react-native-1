@@ -17,7 +17,7 @@ class ListItem extends React.PureComponent {
 
   render() {
     const item = this.props.item;
-    const price = item.price_formatted.split(' ')[0];
+    const price = item.price_formatted;
     return(
       <TouchableHighlight onPress={this._onPress} underlayColor='#dddddd'>
         <View>
@@ -55,7 +55,10 @@ export default class SearchResults extends Component {
   );
 
   _onPressItem = (index) => {
-    console.log('Pressed now: ' + index);
+    const { navigate, state } = this.props.navigation //.state.params.listings[index];
+    this.props.navigation.navigate(
+      'Property', {property: state.params.listings[index]}
+    )
   };
 
   render() {
